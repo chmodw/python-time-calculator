@@ -27,7 +27,7 @@ def add_time(start, duration, day=False):
             else:
                 sHour = 0  # Midnight 12
                 dayCount += 1
-                if sDayIndex < 7:
+                if sDayIndex < 6:
                     sDayIndex += 1
                 else:
                     sDayIndex = 0  # Monday
@@ -42,12 +42,3 @@ def add_time(start, duration, day=False):
         " (" + str(dayCount) + " days later)" if dayCount > 1 else "")
 
     return sHour + ":" + sMinute + " " + sFormate + dayName + dayCount
-
-
-print(add_time("3:00 PM", "3:10"))
-print(add_time("11:30 AM", "2:32", "Monday"))
-print(add_time("11:43 AM", "00:20"))
-print(add_time("10:10 PM", "3:30"))
-print(add_time("11:43 PM", "24:20", "tueSday"))
-print(add_time("6:30 PM", "205:12"))
-print(add_time("8:16 PM", "466:02"))  # 6:18 AM (20 days later)
