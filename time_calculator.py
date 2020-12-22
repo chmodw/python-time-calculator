@@ -26,9 +26,9 @@ def add_time(start, duration, day=False):
                 sHour += 1
             else:
                 sHour = 0  # Midnight 12
+                dayCount += 1
                 if sDayIndex < 7:
                     sDayIndex += 1
-                    dayCount += 1
                 else:
                     sDayIndex = 0  # Monday
 
